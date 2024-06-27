@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: sample-discovery-service
+
+eureka:
+  client:
+    registerWithEureka: false
+
+server:
+  port: 8086
+
+logging:
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF
