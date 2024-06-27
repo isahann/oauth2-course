@@ -17,19 +17,23 @@ import java.util.List;
 @Slf4j
 public class UsersController {
 
-	@Secured("hasAuthority('SCOPE_profile")
+	// either can be used
+//	@Secured("SCOPE_profile")
+	@PreAuthorize("hasAuthority('SCOPE_cats')")
 	@GetMapping("/status/check")
 	public String status() {
 		return "Hello OAuth2!";
 	}
 
-	@Secured("hasAuthority('SCOPE_cats")
+//	@Secured("SCOPE_cats")
+	@PreAuthorize("hasAuthority('SCOPE_cats')")
 	@GetMapping("/cats")
 	public List<String> customScopeTest() {
 		return Arrays.asList("Joselito", "Gigio", "Bepinho", "Dimitri");
 	}
 
-	@Secured("hasRole('developer')")
+//	@Secured("ROLE_developer")
+	@PreAuthorize("hasRole('developer')")
 	@GetMapping("/developers")
 	public List<String> customRoleTest() {
 		return Arrays.asList("Isahann", "Hanacleto");
@@ -44,8 +48,6 @@ public class UsersController {
 	@PostAuthorize("returnObject.userId == #jwt.subject")
 	@GetMapping(path = "/{id}")
 	public UserDetailsResponse getUser(@PathVariable String id, @AuthenticationPrincipal Jwt jwt) {
-		log.info("getUser() called");
-
 		return UserDetailsResponse.builder()
 				.userFirstName("Isahann")
 				.userLastName("Hanacleto")
