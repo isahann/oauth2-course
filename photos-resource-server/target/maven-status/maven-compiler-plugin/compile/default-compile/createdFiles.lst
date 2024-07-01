@@ -1,0 +1,5 @@
+com/appsdeveloperblog/ws/api/photos/security/WebSecurityConfig.class
+com/appsdeveloperblog/ws/api/photos/controllers/PhotosController.class
+com/appsdeveloperblog/ws/api/photos/response/PhotoRest.class
+com/appsdeveloperblog/ws/api/photos/security/KeycloakRoleConverter.class
+com/appsdeveloperblog/ws/api/photos/PhotosApplication.class
