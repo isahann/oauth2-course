@@ -1,13 +1,13 @@
 _type: export
 __export_format: 4
-__export_date: 2024-06-27T20:38:03.668Z
+__export_date: 2024-07-01T22:44:49.221Z
 __export_source: insomnia.desktop.app:v9.3.0-beta.0
 resources:
   - _id: req_232230bd2c484ba4bb1827b908ad31f5
     parentId: fld_ebb120b3fd3747eb8dc91b58a64dd2c4
-    modified: 1719516971228
+    modified: 1719586041980
     created: 1719514446538
-    url: http://localhost:8081/users/status/check
+    url: http://{{ _.apiGatewayUrl }}/users/status/check
     name: sample-resource-server request
     description: ""
     method: GET
@@ -55,9 +55,9 @@ resources:
     _type: workspace
   - _id: req_ecdd33c02bae45fd98fe88bdc44c872e
     parentId: fld_ebb120b3fd3747eb8dc91b58a64dd2c4
-    modified: 1719517002705
+    modified: 1719586050280
     created: 1719516985368
-    url: http://localhost:8081/albums
+    url: http://{{ _.apiGatewayUrl }}/albums
     name: albums-resource-server request
     description: ""
     method: GET
@@ -83,9 +83,9 @@ resources:
     _type: request
   - _id: req_192bbdf1ca504b07a5507484be651332
     parentId: fld_ebb120b3fd3747eb8dc91b58a64dd2c4
-    modified: 1719516997184
+    modified: 1719586055737
     created: 1719516993456
-    url: http://localhost:8081/photos
+    url: http://{{ _.apiGatewayUrl }}/photos
     name: photos-resource-server request
     description: ""
     method: GET
@@ -111,9 +111,9 @@ resources:
     _type: request
   - _id: req_39a9d7bef733435fb33a55594c32ea12
     parentId: fld_b830ddefe24241cea07948d843afd30e
-    modified: 1719412052047
+    modified: 1719585885477
     created: 1719343282130
-    url: http://localhost:8083/users/b925b527-cb0f-4407-8dab-88bb47193ae0
+    url: http://localhost:8081/users/b925b527-cb0f-4407-8dab-88bb47193ae0
     name: User details
     description: ""
     method: GET
@@ -211,9 +211,9 @@ resources:
     _type: request
   - _id: req_3ded35a542384412b771f8fa1ce96619
     parentId: fld_b830ddefe24241cea07948d843afd30e
-    modified: 1719344808424
+    modified: 1719586071847
     created: 1719001899593
-    url: http://localhost:8083/users/status/check
+    url: http://{{ _.apiGatewayUrl }}/users/status/check
     name: Status check
     description: ""
     method: GET
@@ -239,9 +239,9 @@ resources:
     _type: request
   - _id: req_c7cfdc303339485a92209fb195d20e00
     parentId: fld_b830ddefe24241cea07948d843afd30e
-    modified: 1719344810085
+    modified: 1719586062653
     created: 1719002327299
-    url: http://localhost:8083/users/cats
+    url: http://{{ _.apiGatewayUrl }}/users/cats
     name: Cats
     description: ""
     method: GET
@@ -267,9 +267,10 @@ resources:
     _type: request
   - _id: req_7cf0b8c1457b4922a5590eb3b60c7c9d
     parentId: fld_7b81752847654834a611e86d462f311f
-    modified: 1719517016920
+    modified: 1719586272881
     created: 1719001732570
-    url: http://localhost:8080/realms/sample-oauth-realm/protocol/openid-connect/token
+    url: http://{{ _.keycloakUrl
+      }}/realms/sample-oauth-realm/protocol/openid-connect/token
     name: Exchange code for access token
     description: ""
     method: POST
@@ -290,7 +291,7 @@ resources:
           description: ""
         - id: pair_0665ad9a670f4fe3813dc46be9f9cf18
           name: code
-          value: d6ca34b3-38b1-4418-9167-97691af98a3d.fb718244-1b53-4037-a131-9798f871a975.00a03bfd-525d-46c7-8241-832fd7758933
+          value: dbc45639-4441-48d6-ae98-2a4d3894257b.823ce77a-c8d7-4b59-98e7-b6564c082874.00a03bfd-525d-46c7-8241-832fd7758933
           description: ""
         - id: pair_653ac30d37504ef8b0c7c9ca08ef513a
           name: redirect_uri
@@ -338,9 +339,10 @@ resources:
     _type: request_group
   - _id: req_96776a650a714658befc456d41136bd5
     parentId: fld_7b81752847654834a611e86d462f311f
-    modified: 1719344711132
+    modified: 1719586010803
     created: 1719001088653
-    url: http://localhost:8080/realms/sample-oauth-realm/protocol/openid-connect/auth
+    url: http://{{ _.keycloakUrl
+      }}/realms/sample-oauth-realm/protocol/openid-connect/auth
     name: Code grant authorize
     description: ""
     method: GET
@@ -384,21 +386,25 @@ resources:
     _type: request
   - _id: env_99d30891da4bdcebc63947a8fc17f076de878684
     parentId: wrk_scratchpad
-    modified: 1719517017604
+    modified: 1719586273513
     created: 1718915280766
     name: Base Environment
     data:
-      token: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2VFJEci1GbVRObmhENHQ2YWVkcGtTZTVWSmg5WDRVQnB6WWgzZ0FSWlFzIn0.eyJleHAiOjE3MTk1MTczMTcsImlhdCI6MTcxOTUxNzAxNywiYXV0aF90aW1lIjoxNzE5NTE3MDA1LCJqdGkiOiI3MDQwOTcwNS1jODQ4LTRkMGEtODA3ZC01YzUwZWI2NmYxYmEiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL3NhbXBsZS1vYXV0aC1yZWFsbSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJiOTI1YjUyNy1jYjBmLTQ0MDctOGRhYi04OGJiNDcxOTNhZTAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzYW1wbGUtb2F1dGgtY2xpZW50Iiwic2lkIjoiZmI3MTgyNDQtMWI1My00MDM3LWExMzEtOTc5OGY4NzFhOTc1IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjgwODMiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtc2FtcGxlLW9hdXRoLXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJkZXZlbG9wZXIiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgY2F0cyIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoiSXNhaGFubiBIYW5hY2xldG8iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJpc2FoYW5uLmhhbmFjbGV0byIsImdpdmVuX25hbWUiOiJJc2FoYW5uIiwiZmFtaWx5X25hbWUiOiJIYW5hY2xldG8iLCJlbWFpbCI6ImlzYWhhbmFjbGV0b0BnbWFpbC5jb20ifQ.zTzDjJtPWsxcQbX8hbrBmeU9zYN9mTUb0EWBX77crJts4aAHV2pSnJkJ9wUd45hKH8OG35vWFilZKzrbnTpKF-ZyhTnKs65SSO4wCftCjfkJpCYg3YYmhBJsb7D4QYDKFKR8JIjO0y08U68CXU_EhLW8kBwJw6BK90igLW7-QMBt3g1CJXeCe2Ga2QS5qfJRpG5qyG5GjAJiKCtsMjxgIClnsBMKWr96Z-KvETTM6uX-NOBtu1d7HBnZZmS0dC5MdONouC3iVURTscb1itTjWIQuPP6mMGI67DRc83nv8f_DsapNldISa3kA_Ja2IPE4CzjJXw_TB6wps_M18O-4hA
+      token: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2VFJEci1GbVRObmhENHQ2YWVkcGtTZTVWSmg5WDRVQnB6WWgzZ0FSWlFzIn0.eyJleHAiOjE3MTk1ODY1NzMsImlhdCI6MTcxOTU4NjI3MywiYXV0aF90aW1lIjoxNzE5NTg1ODUxLCJqdGkiOiJmZWNkODI2ZS0zODVlLTQ1NjktYTFlMS01NjEzOTdjNzI0ZDkiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL3NhbXBsZS1vYXV0aC1yZWFsbSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJiOTI1YjUyNy1jYjBmLTQ0MDctOGRhYi04OGJiNDcxOTNhZTAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzYW1wbGUtb2F1dGgtY2xpZW50Iiwic2lkIjoiODIzY2U3N2EtYzhkNy00YjU5LTk4ZTctYjY1NjRjMDgyODc0IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjgwODMiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtc2FtcGxlLW9hdXRoLXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJkZXZlbG9wZXIiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgY2F0cyIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoiSXNhaGFubiBIYW5hY2xldG8iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJpc2FoYW5uLmhhbmFjbGV0byIsImdpdmVuX25hbWUiOiJJc2FoYW5uIiwiZmFtaWx5X25hbWUiOiJIYW5hY2xldG8iLCJlbWFpbCI6ImlzYWhhbmFjbGV0b0BnbWFpbC5jb20ifQ.fsg_nCJja2mpo6qOnElqksnWC-9k7l5terlmMH-0rtjTgNh4H9nhKFbP7xOxnzArbEJ8WPsPLSD6WjHW1-7tBeJa8EoXZ0Mh243fMMB2zN-U7qGpsgHnqygWzR8eA-95garzyQeRMG6sIZfmNu7CnEV1piybTJy73JkghVhh4LtDa0thiKEB8ec7vIxuVY2KqMzx_w6euisJaMcxGdqEcItp8k7ppWaz6QzqCc8mNOEWEhDC9uKP3peWC6AkADwZTjTvQDMYY4zgZaopKhsHbc7xaGkRKnbE0XzP6HYXosizTFfByEdF-XIRroh4K_UyzSYS2mLFCsQmf2odTI9jlQ
+      keycloakUrl: localhost:8080
+      apiGatewayUrl: localhost:8081
     dataPropertyOrder:
       "&":
         - token
+        - keycloakUrl
+        - apiGatewayUrl
     color: null
     isPrivate: false
     metaSortKey: 1718915280766
     _type: environment
   - _id: jar_99d30891da4bdcebc63947a8fc17f076de878684
     parentId: wrk_scratchpad
-    modified: 1719517017598
+    modified: 1719586273512
     created: 1718915280781
     name: Default Jar
     cookies:
@@ -411,11 +417,7 @@ resources:
         secure: false
         httpOnly: true
         extensions: []
-        creation: null
-        creationIndex: null
         hostOnly: true
-        pathIsDefault: null
-        lastAccessed: null
       - id: 9b218146-6a9a-4f5c-a12b-76e888aab1f3
         key: AUTH_SESSION_ID
         value: f156ff4a-d157-4b26-bcdf-89d47741c5bc
@@ -425,11 +427,7 @@ resources:
         secure: true
         httpOnly: true
         extensions: []
-        creation: null
-        creationIndex: null
         hostOnly: true
-        pathIsDefault: null
-        lastAccessed: null
       - id: 9910dea0-ee78-4e75-800e-10ddad3f8057
         key: AUTH_SESSION_ID_LEGACY
         value: f156ff4a-d157-4b26-bcdf-89d47741c5bc
@@ -439,11 +437,7 @@ resources:
         secure: false
         httpOnly: true
         extensions: []
-        creation: null
-        creationIndex: null
         hostOnly: true
-        pathIsDefault: null
-        lastAccessed: null
       - id: 2c2e0e00-a2ee-4327-a1de-8f2a300385ff
         key: KC_RESTART
         value: eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..cwhkbI6Nzak9T2D1zlXLMQ.bBw_nx1iFCzkS1qoExm7m7bWFfDb3CGxql7hxl1p2IgdLKwoN_qR1Na_8MYsUlmrfwv5nYXQ9gk3oCbtfLzJ3G5a_-ty8d1qgmpTzT1S3SGUjQdV9l2QNBwNgriTjpX0vINmh_M-nww-Hx78zG3xQ_qgbG4QimFUYstyrnlzWO8QgmhtBXcI5EMJ2yWeOr6BsJTAOpgQz6MmJJFexRWICvOHb4oOcm89TInlHxJl_toeD87IkKhLwdNr1SHl8kjZ2-0Pd9LgpQoMg7udQOCH5D3l4beNFS3DsPnasvKwB9X5Z8q8wJhpFstolGqgVLd9oUgVqB-YmEwPTy3Gpflc159Cfezl_avzugAPCYE4Fv6RyrVFfKshv3STFg1H9Wydpj3zJK4WHXdltTRXL-84pOl_N1ZAkADUhRj9p01BkI4V2wqcbmVz3bumnmvyvqf97n4kGj7Dznd6fbYhO61wIzgRjNoqfMSNtRowj14GBPvtIdAtEFp7WN1uEeUUxyy75ROyliAry2QGKELOCKeHpBmBp7Uoq5F9J8nT0Q4hBZPPr7OZkQJ3oHkrvAa1BXt9hZ4PjJ0ekPgc7QIQ2CBLtZO6t0i643-_JxEFnoa1i262AkAZkabfk808F8ZwW1imKVvcBf8Vc7b14MJ8RafDIioLxzTQUET2_vW4mio01rGwWm06X5i8hsuwiZ47pYroTtDhRFHub9_02Md3sHy5MbR_khFLPm8c0EeHWF8B6YGYv7gLUjNmD8ATHPFUGZzRgy0q3ffwRhnnUFdCMjUZpg.LAXlu-JFkrDKdiIrMPKMfQ
@@ -453,9 +447,5 @@ resources:
         secure: true
         httpOnly: true
         extensions: []
-        creation: null
-        creationIndex: null
         hostOnly: true
-        pathIsDefault: null
-        lastAccessed: null
     _type: cookie_jar
