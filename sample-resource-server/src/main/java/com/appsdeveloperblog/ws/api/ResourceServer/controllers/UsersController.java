@@ -1,7 +1,9 @@
 package com.appsdeveloperblog.ws.api.ResourceServer.controllers;
 
 import com.appsdeveloperblog.ws.api.ResourceServer.response.UserDetailsResponse;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.core.env.Environment;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -14,15 +16,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/users")
+@RequiredArgsConstructor
 @Slf4j
 public class UsersController {
+
+	private final Environment env;
 
 	// either can be used
 //	@Secured("SCOPE_profile")
 	@PreAuthorize("hasAuthority('SCOPE_cats')")
 	@GetMapping("/status/check")
 	public String status() {
-		return "Hello OAuth2!";
+		return String.format("Hello OAuth2! Running on port [%s]", env.getProperty("local.server.port"));
 	}
 
 //	@Secured("SCOPE_cats")

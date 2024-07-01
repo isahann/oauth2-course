@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a247619c-7db7-40da-82ce-1fa413aea252" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Albums-Resource-Server" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Photos-Resource-Server" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/albums-Resource-Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/albums-Resource-Server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/albums-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/albums/AlbumsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/albums-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/albums/AlbumsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/albums-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/albums/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/albums-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/albums/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/albums-Resource-Server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/albums-Resource-Server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos-Resource-Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/photos-Resource-Server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/photos/PhotosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/photos-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/photos/PhotosApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/photos/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/photos-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/photos/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos-Resource-Server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/photos-Resource-Server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample-api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sample-api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample-api-gateway/src/main/java/com/isahann/sampleapigateway/SampleApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/sample-api-gateway/src/main/java/com/isahann/sampleapigateway/SampleApiGatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample-api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sample-api-gateway/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample-resource-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sample-resource-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample-resource-server/src/main/java/com/appsdeveloperblog/ws/api/ResourceServer/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sample-resource-server/src/main/java/com/appsdeveloperblog/ws/api/ResourceServer/controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample-resource-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sample-resource-server/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2iVpQ1wVFxbxCFHQC32tKhIjfz6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/isahann/Documents/courses/oauth2-spring-course"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a247619c-7db7-40da-82ce-1fa413aea252" name="Changes" comment="" />
+      <created>1719585579113</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719585579113</updated>
+    </task>
+    <servers />
+  </component>
+</project>
