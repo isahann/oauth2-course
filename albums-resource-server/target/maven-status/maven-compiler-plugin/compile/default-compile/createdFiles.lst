@@ -1,5 +1,0 @@
-com/appsdeveloperblog/ws/api/albums/security/WebSecurityConfig.class
-com/appsdeveloperblog/ws/api/albums/security/KeycloakRoleConverter.class
-com/appsdeveloperblog/ws/api/albums/AlbumsApplication.class
-com/appsdeveloperblog/ws/api/albums/response/AlbumRest.class
-com/appsdeveloperblog/ws/api/albums/controllers/AlbumsController.class

@@ -1,5 +1,0 @@
-/home/isahann/Documents/courses/oauth2-spring-course/Photos-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/photos/PhotosApplication.java
-/home/isahann/Documents/courses/oauth2-spring-course/Photos-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/photos/controllers/PhotosController.java
-/home/isahann/Documents/courses/oauth2-spring-course/Photos-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/photos/response/PhotoRest.java
-/home/isahann/Documents/courses/oauth2-spring-course/Photos-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/photos/security/KeycloakRoleConverter.java
-/home/isahann/Documents/courses/oauth2-spring-course/Photos-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/photos/security/WebSecurityConfig.java

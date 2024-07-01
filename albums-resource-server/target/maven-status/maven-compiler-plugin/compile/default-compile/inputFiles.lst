@@ -1,5 +1,0 @@
-/home/isahann/Documents/courses/oauth2-spring-course/Albums-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/albums/AlbumsApplication.java
-/home/isahann/Documents/courses/oauth2-spring-course/Albums-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/albums/controllers/AlbumsController.java
-/home/isahann/Documents/courses/oauth2-spring-course/Albums-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/albums/response/AlbumRest.java
-/home/isahann/Documents/courses/oauth2-spring-course/Albums-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/albums/security/KeycloakRoleConverter.java
-/home/isahann/Documents/courses/oauth2-spring-course/Albums-Resource-Server/src/main/java/com/appsdeveloperblog/ws/api/albums/security/WebSecurityConfig.java
